@@ -1,0 +1,195 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="15505" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="BYZ-38-t0r">
+    <device id="retina6_1" orientation="portrait" appearance="light"/>
+    <dependencies>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="15510"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <scenes>
+        <!--Sign Up View Controller-->
+        <scene sceneID="tne-QT-ifu">
+            <objects>
+                <viewController id="BYZ-38-t0r" customClass="SignUpViewController" customModule="AuthApp" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="FaT-Hb-piY">
+                                <rect key="frame" x="157" y="94" width="100" height="100"/>
+                                <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="100" id="AIW-63-dDs"/>
+                                    <constraint firstAttribute="width" constant="100" id="cwy-Wt-DTT"/>
+                                </constraints>
+                            </imageView>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="92w-El-kOY">
+                                <rect key="frame" x="186.5" y="202" width="41" height="30"/>
+                                <state key="normal" title="Photo">
+                                    <color key="titleColor" cocoaTouchSystemColor="darkTextColor"/>
+                                </state>
+                                <connections>
+                                    <action selector="photoButtonTapped:" destination="BYZ-38-t0r" eventType="touchUpInside" id="yyk-YN-7Vf"/>
+                                </connections>
+                            </button>
+                            <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" spacing="20" translatesAutoresizingMaskIntoConstraints="NO" id="U3p-ng-G5x">
+                                <rect key="frame" x="30" y="262" width="354" height="330"/>
+                                <subviews>
+                                    <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Имя" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="a0Q-Ul-sND">
+                                        <rect key="frame" x="0.0" y="0.0" width="354" height="50"/>
+                                        <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                        <textInputTraits key="textInputTraits"/>
+                                    </textField>
+                                    <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Фамилия" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="IRE-tJ-t0Y">
+                                        <rect key="frame" x="0.0" y="70" width="354" height="50"/>
+                                        <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                        <textInputTraits key="textInputTraits"/>
+                                    </textField>
+                                    <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Почта" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="h0d-6a-hQS">
+                                        <rect key="frame" x="0.0" y="140" width="354" height="50"/>
+                                        <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                        <textInputTraits key="textInputTraits"/>
+                                    </textField>
+                                    <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Пароль" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="tfH-Fc-PhI">
+                                        <rect key="frame" x="0.0" y="210" width="354" height="50"/>
+                                        <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                        <textInputTraits key="textInputTraits" secureTextEntry="YES"/>
+                                    </textField>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="irt-OS-tlr">
+                                        <rect key="frame" x="0.0" y="280" width="354" height="50"/>
+                                        <constraints>
+                                            <constraint firstAttribute="height" constant="50" id="z8h-Xi-2i4"/>
+                                        </constraints>
+                                        <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                        <state key="normal" title="Зарегистрироваться">
+                                            <color key="titleColor" cocoaTouchSystemColor="darkTextColor"/>
+                                        </state>
+                                        <connections>
+                                            <action selector="registerTapped:" destination="BYZ-38-t0r" eventType="touchUpInside" id="Xnd-An-vKD"/>
+                                        </connections>
+                                    </button>
+                                </subviews>
+                                <constraints>
+                                    <constraint firstItem="h0d-6a-hQS" firstAttribute="height" secondItem="a0Q-Ul-sND" secondAttribute="height" id="QsZ-Ek-E2I"/>
+                                    <constraint firstItem="irt-OS-tlr" firstAttribute="height" secondItem="a0Q-Ul-sND" secondAttribute="height" id="arN-9e-rVR"/>
+                                    <constraint firstItem="tfH-Fc-PhI" firstAttribute="height" secondItem="a0Q-Ul-sND" secondAttribute="height" id="qec-RV-PCc"/>
+                                    <constraint firstItem="IRE-tJ-t0Y" firstAttribute="height" secondItem="a0Q-Ul-sND" secondAttribute="height" id="yYT-bF-wuu"/>
+                                </constraints>
+                            </stackView>
+                        </subviews>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+                        <constraints>
+                            <constraint firstItem="FaT-Hb-piY" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" constant="50" id="8BP-vk-bJ2"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="U3p-ng-G5x" secondAttribute="trailing" constant="30" id="CdN-nP-o9p"/>
+                            <constraint firstItem="U3p-ng-G5x" firstAttribute="top" secondItem="92w-El-kOY" secondAttribute="bottom" constant="30" id="Chv-K1-JRk"/>
+                            <constraint firstItem="FaT-Hb-piY" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="YDQ-Pa-Vhb"/>
+                            <constraint firstItem="U3p-ng-G5x" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="30" id="fcA-XV-uLI"/>
+                            <constraint firstItem="92w-El-kOY" firstAttribute="top" secondItem="FaT-Hb-piY" secondAttribute="bottom" constant="8" id="fkF-Ac-oMv"/>
+                            <constraint firstItem="92w-El-kOY" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="n8H-Aa-BLx"/>
+                        </constraints>
+                        <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
+                    </view>
+                    <navigationItem key="navigationItem" id="hjn-f5-NvA"/>
+                    <connections>
+                        <outlet property="emailTextField" destination="h0d-6a-hQS" id="DDt-ho-M4x"/>
+                        <outlet property="firstNameTextField" destination="a0Q-Ul-sND" id="gVx-Nt-qie"/>
+                        <outlet property="lastNameTextField" destination="IRE-tJ-t0Y" id="6B8-vE-Q1k"/>
+                        <outlet property="passwordTextField" destination="tfH-Fc-PhI" id="0M1-C3-laM"/>
+                        <outlet property="photoButton" destination="92w-El-kOY" id="Jzg-se-Vnr"/>
+                        <outlet property="photoImageView" destination="FaT-Hb-piY" id="FP3-cj-ojr"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1047.8260869565217" y="137.94642857142856"/>
+        </scene>
+        <!--Profile View Controller-->
+        <scene sceneID="ZR6-yM-fOa">
+            <objects>
+                <viewController storyboardIdentifier="profileVC" modalPresentationStyle="fullScreen" id="M2b-Qj-2GV" customClass="ProfileViewController" customModule="AuthApp" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="ScX-OF-Zv0">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="W5s-cp-CcJ">
+                                <rect key="frame" x="78.5" y="790" width="257" height="22"/>
+                                <color key="tintColor" cocoaTouchSystemColor="darkTextColor"/>
+                                <state key="normal" title=" Поделиться изображением" image="square.and.arrow.up" catalog="system">
+                                    <color key="titleColor" cocoaTouchSystemColor="darkTextColor"/>
+                                </state>
+                                <connections>
+                                    <action selector="shareButtonTapped:" destination="M2b-Qj-2GV" eventType="touchUpInside" id="jww-AP-iX8"/>
+                                </connections>
+                            </button>
+                            <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" spacing="20" translatesAutoresizingMaskIntoConstraints="NO" id="NW6-kh-0xP">
+                                <rect key="frame" x="30" y="74" width="354" height="170"/>
+                                <subviews>
+                                    <stackView opaque="NO" contentMode="scaleToFill" spacing="10" translatesAutoresizingMaskIntoConstraints="NO" id="MLi-We-uxq">
+                                        <rect key="frame" x="0.0" y="0.0" width="354" height="100"/>
+                                        <subviews>
+                                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="9ju-lI-WoT">
+                                                <rect key="frame" x="0.0" y="0.0" width="100" height="100"/>
+                                                <constraints>
+                                                    <constraint firstAttribute="height" constant="100" id="kic-1F-Hsw"/>
+                                                    <constraint firstAttribute="width" constant="100" id="z9i-PO-Cmq"/>
+                                                </constraints>
+                                            </imageView>
+                                            <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" distribution="fillEqually" spacing="20" translatesAutoresizingMaskIntoConstraints="NO" id="idR-rv-2Kg">
+                                                <rect key="frame" x="110" y="0.0" width="244" height="100"/>
+                                                <subviews>
+                                                    <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Имя" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="lln-ZE-J2f">
+                                                        <rect key="frame" x="0.0" y="0.0" width="244" height="40"/>
+                                                        <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                                        <textInputTraits key="textInputTraits"/>
+                                                    </textField>
+                                                    <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Фамилия" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="Ejo-AW-XE2">
+                                                        <rect key="frame" x="0.0" y="60" width="244" height="40"/>
+                                                        <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                                        <textInputTraits key="textInputTraits"/>
+                                                    </textField>
+                                                </subviews>
+                                            </stackView>
+                                        </subviews>
+                                    </stackView>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="8Qk-Uv-M3d">
+                                        <rect key="frame" x="0.0" y="120" width="354" height="50"/>
+                                        <constraints>
+                                            <constraint firstAttribute="height" constant="50" id="pHV-xf-Xlg"/>
+                                        </constraints>
+                                        <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                        <state key="normal" title="Изменить">
+                                            <color key="titleColor" cocoaTouchSystemColor="darkTextColor"/>
+                                        </state>
+                                        <connections>
+                                            <action selector="changeInfoTapped:" destination="M2b-Qj-2GV" eventType="touchUpInside" id="dKe-7X-8y0"/>
+                                        </connections>
+                                    </button>
+                                </subviews>
+                            </stackView>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <constraints>
+                            <constraint firstItem="QpJ-mw-ZW9" firstAttribute="bottom" secondItem="W5s-cp-CcJ" secondAttribute="bottom" constant="50" id="9wf-OQ-5xJ"/>
+                            <constraint firstItem="NW6-kh-0xP" firstAttribute="top" secondItem="QpJ-mw-ZW9" secondAttribute="top" constant="30" id="DOm-fi-FIB"/>
+                            <constraint firstItem="W5s-cp-CcJ" firstAttribute="centerX" secondItem="ScX-OF-Zv0" secondAttribute="centerX" id="MsF-fF-M4y"/>
+                            <constraint firstItem="NW6-kh-0xP" firstAttribute="leading" secondItem="QpJ-mw-ZW9" secondAttribute="leading" constant="30" id="p8f-2I-0vv"/>
+                            <constraint firstItem="QpJ-mw-ZW9" firstAttribute="trailing" secondItem="NW6-kh-0xP" secondAttribute="trailing" constant="30" id="tZ7-R4-cSs"/>
+                        </constraints>
+                        <viewLayoutGuide key="safeArea" id="QpJ-mw-ZW9"/>
+                    </view>
+                    <navigationItem key="navigationItem" id="5Qa-Db-aN5"/>
+                    <connections>
+                        <outlet property="firstnameTextField" destination="lln-ZE-J2f" id="DdA-dS-vop"/>
+                        <outlet property="lastnameTextField" destination="Ejo-AW-XE2" id="2Bp-g4-vwA"/>
+                        <outlet property="photoImageView" destination="9ju-lI-WoT" id="1y5-PN-DPa"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="wAX-1o-pw8" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1818.840579710145" y="136.60714285714286"/>
+        </scene>
+    </scenes>
+    <resources>
+        <image name="square.and.arrow.up" catalog="system" width="56" height="64"/>
+    </resources>
+</document>
